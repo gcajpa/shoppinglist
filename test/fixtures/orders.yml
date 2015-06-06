@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  list_id: 
+  product_id: 
+  qt: 1
+  price: 1.5
+
+two:
+  list_id: 
+  product_id: 
+  qt: 1
+  price: 1.5

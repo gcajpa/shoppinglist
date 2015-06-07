@@ -14,10 +14,8 @@ gem 'simple_form'
 gem "cocoon"
 gem 'devise'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
-
 group :development, :test do
+  gem "letter_opener"
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'

@@ -1,1 +1,9 @@
-<%= list.supermarket %>
+<tr>
+  <td><%= list.supermarket %></td>
+  <td class="text-center"><%= format_br_date list.created_at %></td>
+  <td class="text-center">
+    <%= link_to "Ver", list %> |
+    <%= link_to "Editar", edit_list_path(list) %> |
+    <%= link_to "Excluir", list, method: :delete, data: { confirm: 'Are you sure?' }  %>
+  </td>
+</tr>

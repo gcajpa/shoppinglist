@@ -1,0 +1,12 @@
+<%= content_tag(:div, class: "row nested-fields") do %>
+  <%= f.input :product_id, label: "Produto", collection: Product.all, wrapper_html: { class: 'col-xs-4' } %>
+  <%= f.input :qt, label: "Quantidade", wrapper_html: { class: 'col-xs-4' }  %>
+  <%= content_tag(:div, class: "col-xs-4") do %>
+    <%= content_tag(:div, class: "row") do %>
+      <%= f.input :price, label: 'Preço', wrapper_html: { class: 'col-xs-10' }  %>
+      <%= content_tag(:div, class: "col-xs-2") do %>
+        <%= link_to_remove_association '', f, class: 'glyphicon glyphicon-remove' %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

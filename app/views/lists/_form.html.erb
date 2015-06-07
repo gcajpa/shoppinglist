@@ -1,0 +1,25 @@
+<%= simple_form_for @list, wrapper: :vertical_form do |f|%>
+  <%= f.error_notification %>
+
+  <%= f.input :supermarket, label: "Supermercado" %>
+
+  <div id="order">
+    <%= f.simple_fields_for :orders do |orders_form| %>
+      <%= render 'order_fields', f: orders_form %>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <%= link_to_add_association 'Adicionar Produto',
+          f, :orders, class: 'btn btn-primary',
+          :"data-association-insertion-node" => '#order',
+          :"data-association-insertion-method" => 'append' %>
+    </div>
+      <div class="col-xs-6">
+        <p class="text-right">
+          <%= f.button :submit, class: "btn btn-primary" %>
+          <%= link_to 'Voltar', lists_path, class: "btn btn-default" %>
+        </p>
+      </div>
+  </div>
+<% end %>

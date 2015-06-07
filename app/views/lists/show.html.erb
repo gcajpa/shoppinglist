@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>Lista criada em <%= format_br_date @list.created_at %></h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>
+          Produto
+        </th>
+        <th class="text-center">
+          Quantidade
+        </th>
+        <th class="text-center">
+          Preço Unitário
+        </th>
+      </tr>
+    </thead>
+    <% @list.orders.each do |order| %>
+      <tr>
+        <td>
+          <%= order.product.name %>
+        </td>
+        <td class="text-center">
+          <%= order.qt %>
+        </td>
+        <td class="text-center">
+          <%= currency_format order.price %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+
+  <p> <%= link_to "Voltar", lists_path %> </p>
+</div>

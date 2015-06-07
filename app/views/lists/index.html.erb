@@ -1,5 +1,12 @@
 <div class="container">
+  <table class="table">
+    <tr>
+      <th>Local</th>
+      <th class="text-center">Data</th>
+      <th class="text-center">Ações</th>
+    </tr>
   <% @lists.each do |list| %>
     <%= render list %>
   <% end %>
+  </table>
 </div>

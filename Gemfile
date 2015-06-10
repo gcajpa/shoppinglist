@@ -13,6 +13,12 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 gem "cocoon"
 gem 'devise'
+gem 'puma'
+
+group :production do
+  gem 'rails_stdout_logging'
+  gem 'lograge'
+end
 
 group :development, :test do
   gem "letter_opener"

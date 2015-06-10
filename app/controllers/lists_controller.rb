@@ -34,7 +34,7 @@ class ListsController < ApplicationController
 
   def destroy
     @list.destroy
-    redirect_to lists_path, notice: 'Job was successfully destroyed.'
+    redirect_to lists_path, notice: 'Lista excluída.'
   end
 
   private

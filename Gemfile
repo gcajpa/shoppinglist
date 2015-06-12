@@ -17,7 +17,7 @@ gem 'puma'
 group :production do
   gem 'rails_stdout_logging'
   gem 'lograge'
-  gem 'env'
+  gem 'dotenv-rails', '~> 2.0.1'
 end
 
 group :development, :test do

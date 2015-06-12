@@ -18,6 +18,7 @@ gem 'puma'
 group :production do
   gem 'rails_stdout_logging'
   gem 'lograge'
+  gem 'env'
 end
 
 group :development, :test do

@@ -5,7 +5,11 @@ default: &default
 
 development:
   <<: *default
-  database: shopping-list_development
+  host: shoppinglist.cp5sclqy5fl5.sa-east-1.rds.amazonaws.com
+  port: 5432
+  database: shoppinglist
+  username: shoppinglist
+  password: Shoppinglist1q2w!
 
 test:
   <<: *default
@@ -13,7 +17,7 @@ test:
 
 production:
   <<: *default
-  host: <%= ENV['DATABASE_URL'] %>
+  host: <%= ENV['DATABASE_REMOTE'] %>
   port: <%= ENV['DATABASE_PORT'] %>
   database: shoppinglist
   username: shoppinglist

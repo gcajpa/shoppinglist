@@ -12,4 +12,4 @@ on_worker_boot do
   ActiveRecord::Base.establish_connection
 end
 
-#pidfile '/var/run/shoppinglist/web.pid'
+pidfile '/var/run/shoppinglist/web.pid'

@@ -14,7 +14,7 @@ class ListsController < ApplicationController
 
   def create
     if @list.update_attributes(list_params)
-      Mailer.send_list("teste@teste.com", @list).deliver_later
+      Mailer.send_list("gcajpa@gmail.com", @list).deliver_later
       redirect_to @list
     else
       render 'new', notice: "Erro ao tentar salvar a lista"
